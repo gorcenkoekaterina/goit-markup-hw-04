@@ -391,16 +391,6 @@ svg.social_list {
         transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-
-.portfolio-item .description {
-        transform: translateY(100%);
-        transition: transform 0.3s ease;
-                }
-        
-.portfolio-item:hover .description {
-        transform: translateY(0%);
-                }
-
 .img_wrap {
         position: relative;
         overflow: hidden;
@@ -409,20 +399,25 @@ svg.social_list {
 :root {
         --text-light-color: #f4f4fd;     }
 
-.img-description {
-        color: var(--text-light-color);
-        position: absolute;
-        top: 0;
-        font-size: 16px;
-        line-height: 1.5;
-        letter-spacing: 0.02em;
-        padding: 40px 32px;
-        background-color: #4d5ae5;
-        height: 100%;
-        width: 100%;
-        transform: translateY(100%);
-        transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
+                .img-description {
+                        color: var(--text-light-color);
+                        position: absolute;
+                        top: 0;
+                        font-size: 16px;
+                        line-height: 1.5;
+                        letter-spacing: 0.02em;
+                        padding: 40px 32px;
+                        background-color: #4d5ae5;
+                        height: 100%;
+                        width: 100%;
+                        transform: translateY(100%);
+                        transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+                        will-change: transform;
+                        /* Для кращої анімації */
+                }
+        
+                .portfolio-item:hover .img-description {
+                        transform: translateY(0%);             }
 
 .portfolio-image {
         display: block;
@@ -482,13 +477,16 @@ svg.social_list {
 .footer-social-title {
         color: var(--footer-text-color);
         font-weight: 500;
+        margin-bottom: 16px;
         font-size: 16px;
         line-height: 1.5;
         letter-spacing: 0.02em;
-        margin-bottom: 16px;
         text-align: center;
-}
 
+}
+.social-items {
+        gap: 16px;
+}
 .page-footer-text {
         max-width: 264px;
         font-size: 16px;
@@ -496,4 +494,38 @@ svg.social_list {
         letter-spacing: 0.02em;
         color: #f4f4fd;
 }
+
+/* Основний стиль для посилань соцмереж */
+.social-menu {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: #4d5ae5;
+        /* Основний колір фону */
+        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Стиль для іконок соцмереж */
+.social_list {
+        fill: #f4f4fd;
+        /* Колір іконок */
+        width: 16px;
+        height: 16px;
+}
+
+/* Стилі для станів hover та focus */
+.social-menu:hover,
+.social-menu:focus {
+        background-color: #31d0aa;
+        /* Зелений колір при взаємодії */
+        outline: none;
+        /* Прибираємо стандартний outline */
+}
+
+/* Додатковий стиль для кращої доступності при фокусі */
+.social-menu:focus {
+        box-shadow: 0 0 0 3px rgba(49, 208, 170, 0.3);     }
 
