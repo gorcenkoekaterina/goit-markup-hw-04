@@ -509,7 +509,7 @@ svg.social_list {
 .footer-social-title {
         color: var(--footer-text-color);
         font-weight: 500;
-        margin-bottom: 16px;
+        margin-bottom: 16px !important;
         font-size: 16px;
         line-height: 1.5;
         letter-spacing: 0.02em;
@@ -520,7 +520,7 @@ svg.social_list {
         gap: 16px;
 }
 .page-footer-text {
-        margin-bottom: 16px;
+        margin-bottom: 16px !important;
         max-width: 264px;
         font-size: 16px;
         line-height: 1.5;
@@ -552,13 +552,13 @@ svg.social_list {
 /* Стилі для станів hover та focus */
 .social-menu:hover,
 .social-menu:focus {
-        background-color: #31d0aa;
+        background-color: #31d0aa !important;
         /* Зелений колір при взаємодії */
         outline: none;
         /* Прибираємо стандартний outline */
-}
+        }
 
 /* Додатковий стиль для кращої доступності при фокусі */
 .social-menu:focus {
-        box-shadow: 0 0 0 3px rgba(49, 208, 170, 0.3);     }
+        box-shadow: 0 0 0 3px rgba(49, 208, 170, 0.3) !important;  }
 
