@@ -479,7 +479,7 @@ svg.social_list {
 }
 
 .social-items {
-        gap: 16px;
+        gap: 24px;
 }
 
 
@@ -511,7 +511,7 @@ svg.social_list {
 
 .social-menu:hover,
 .social-menu:focus {
-        background-color: #31d0aa;
+        background-color: #404bbf;;
         outline: none;
 }
 
