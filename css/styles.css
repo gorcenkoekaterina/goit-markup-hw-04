@@ -478,8 +478,8 @@ svg.social_list {
         text-align: center;
 }
 
-.social-items {
-        gap: 24px;
+.footer-social {
+        gap: 16px;
 }
 
 
@@ -509,11 +509,11 @@ svg.social_list {
         height: 16px;
 }
 
-.social-menu:hover,
-.social-menu:focus {
-        background-color: #404bbf;;
+.footer-menu:hover,
+.footer-menu:focus {
+        background-color: #31d0aa;
         outline: none;
 }
 
-.social-menu:focus {
+.footer-menu:focus {
         box-shadow: 0 0 0 3px rgba(49, 208, 170, 0.3);     }
