@@ -37,10 +37,17 @@ img {
 /* common */
 
 .container {
+        width: 100%;
         max-width: 1158px;
-        padding: 0 15px;
         margin: 0 auto;
-}
+        padding: 0 15px;
+        box-sizing: border-box;   }
+
+.header-container,
+.main-container,
+.footer-container {
+        composes: container; }
+
 
 /* header */
 
@@ -258,7 +265,7 @@ img {
         letter-spacing: 0.02em;
         color: #434455;     }
 
-/* --------- section-three -----------*/
+/* --------- Секція три ----------- */
 .section-three {
         background-color: #f4f4fd;
         padding: 120px 0;
@@ -279,7 +286,8 @@ img {
         display: flex;
         gap: 24px;
         padding: 0;
-        margin: 0;
+        margin: 0 0 32px 0;
+        /* Додано відступ знизу перед соцмережами */
         list-style: none;
 }
 
@@ -312,6 +320,8 @@ img {
         letter-spacing: 0.02em;
         text-align: center;
         color: #434455;
+        margin-bottom: 16px;
+        /* Додано відступ між текстом та іконками */
 }
 
 .social-items {
@@ -350,16 +360,17 @@ img {
         box-shadow: 0 0 0 3px rgba(64, 75, 191, 0.3);
 }
 
-svg.social_list {
+.social_list {
         fill: var(--icon-fill-color, #f4f4fd);
-        width: 24px;
-        height: 24px;
+        width: 16px;
+        /* Змінено розмір іконок на стандартний */
+        height: 16px;
         pointer-events: none;
 }
 
 :root {
         --social-bg-color: #4d5ae5;
-        --icon-fill-color: #f4f4fd;     }
+        --icon-fill-color: #f4f4fd;   }
 
 /* --------- section-four -----------*/
 
@@ -459,7 +470,18 @@ svg.social_list {
 
 .page-footer {
         padding: 100px 0;
+        background-color: #2E2F42;
 }
+
+.footer-container {
+        display: flex;
+        align-items: baseline;
+        /* Успадковує всі властивості .container */
+}
+
+.footer-branding {
+        margin-right: 120px;     }
+
 
 .container-footer-container {
         display: flex;
@@ -482,7 +504,7 @@ svg.social_list {
         font-size: 16px;
         line-height: 1.5;
         letter-spacing: 0.02em;
-        text-align: center;
+        text-align: left;
 }
 
 .footer-social {
@@ -523,4 +545,5 @@ svg.social_list {
 }
 
 .footer-menu:focus {
-        box-shadow: 0 0 0 3px rgba(49, 208, 170, 0.3);     }
+        box-shadow: 0 0 0 3px rgba(49, 208, 170, 0.3);
+}
